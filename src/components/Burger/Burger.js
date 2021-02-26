@@ -7,9 +7,9 @@ import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
 
 const burger = (props) => {
      // it returns an object, but we need to get the keys as an array, so we can apply a map, and make it dynamic
-     let transformedIngredients = Object.keys(props.ingredients)
+     let transformedIngredients = Object.keys(props.ingredients) //this method, gives you an array of the keys
      .map(igkey => { // jagaban lecture 129
-         return [...Array(props.ingredients[igkey])].map((_,i) => {
+         return [...Array(props.ingredients[igkey])].map((_,i) => { //Array[] creats empty arrays
              return <BurgerIngredient key={igkey + i} type={igkey} /> //mad oo // since you are returning an array of jsx element (alternative is to use an AUX (HOC)),  then you have to set a unique key
          }); 
      })

@@ -6,8 +6,10 @@ import Logo from '../../Logo/Logo';
 
 const sideDrawer = (props) => {
     return(
-        <div className={classes.sideDrawer}>
+        <div className={classes.SideDrawer}>
+            <div className={classes.Logo}>
             <Logo />
+            </div>
             <nav>
                 <NavigationItems />
             </nav>
@@ -16,3 +18,4 @@ const sideDrawer = (props) => {
 };
 
 export default sideDrawer;
+
